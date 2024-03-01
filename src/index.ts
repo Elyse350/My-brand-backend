@@ -5,12 +5,12 @@ import router from "./routes";
  const app = express();
  app.use(express.json());
 
+ 
 
 
-
- const MONGO_URL ="mongodb+srv://elyse21:elyse21@todo.mdwdjwm.mongodb.net/?retryWrites=true&w=majority&appName=todo";
+ const MONGO_URL ="mongodb+srv://elyse123:elyse123@cluster0.opfpung.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
  mongoose.connect(MONGO_URL,{
-    dbName: "todo",
+    dbName: "Cluster0",
  })
  .then(() => {
     console.log("database connected");
