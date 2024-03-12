@@ -7,6 +7,9 @@
     "start": "nodemon",
     "test": "jest"
   },
+  "bin" : {
+    "execute" : "index.ts"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
