@@ -12,7 +12,7 @@ class BlogController {
                 createdAt
             });
             await blog.save();
-            return response.status(200).json({ messenge: "blog created", data: blog })
+            return response.status(200).json({ message: "blog created", data: blog })
 
         } catch (error) {
             return response.sendStatus(400);

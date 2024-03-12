@@ -10,8 +10,8 @@ class messagecontrller {
                 email,
                 message
             });
-            await message.save();
-            return response.status(200).json({ messenge: "message created", data: messages })
+            await messages.save();
+            return response.status(200).json({ message: "message created", data: messages })
 
         } catch (error) {
             return response.sendStatus(400);

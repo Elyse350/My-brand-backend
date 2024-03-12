@@ -1,7 +1,9 @@
 import  express  from "express";
 import mongoose from "mongoose";
 import router from "./routes";
-
+import swaggerDocs from "./utils/swagger"
+// import swaggerJSDoc from "swagger-jsdoc";
+// import swaggerui from "swagger-ui-express"
  const app = express();
  app.use(express.json());
 
@@ -17,6 +19,8 @@ import router from "./routes";
  })
  .catch((error)=> console.log(error));
  app.use('/', router);
+
  app.listen(5546, () =>{
 console.log('server running on http://localhost:5546');
+swaggerDocs(app, 5546);
  });
