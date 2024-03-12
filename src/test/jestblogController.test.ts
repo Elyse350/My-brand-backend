@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import BlogController from '../controllers/blogController';
 import BlogModel from '../db/blogModel';
+import jest from 'jest'; // Import jest module
 
 describe('BlogController', () => {
   let mockRequest: Partial<Request>;
