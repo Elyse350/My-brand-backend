@@ -2,6 +2,9 @@ import { Request, Response } from 'express';
 import messagecontrller from '../controllers/messegeController'; // Corrected import path
 import MessageModel from '../db/messege'; // Corrected import path
 
+// Add this declaration to resolve the error
+declare const jest: any;
+
 describe('MessageController', () => {
   let mockRequest: Partial<Request>;
   let mockResponse: Partial<Response>;
@@ -31,7 +34,7 @@ describe('MessageController', () => {
     await messagecontrller.CreateMessage(mockRequest as Request, mockResponse as Response);
 
     expect(mockResponse.status).toHaveBeenCalledWith(200);
-  // expect(mockResponse.json).toHaveBeenCalledWith({ message: 'message created', data: messageInstance });
+    // expect(mockResponse.json).toHaveBeenCalledWith({ message: 'message created', data: messageInstance });
   });
 
   // Add similar test cases for other methods like getAllMessage, getMessage, and deleteMessage
